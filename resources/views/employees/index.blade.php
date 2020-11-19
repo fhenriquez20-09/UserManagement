@@ -9,7 +9,7 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
 
-            <a href="{{url('/employees/create')}}">Create new employee</a>
+            <a href="{{url('/employees/create')}}">New employee</a>
                 
                 <table class="table table-light">
                     <thead class="thead-light">

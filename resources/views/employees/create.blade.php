@@ -14,27 +14,9 @@
 
                     {{csrf_field()}}
 
-                    <label for="Name">{{'Name'}}</label>
-                    <input type="text" name="Name" id="Name" value="">
-                    <br>
+                    @include('employees.form')
 
-                    <label for="Email">{{'Email'}}</label>
-                    <input type="email" name="Email" id="Email" value="">
-                    <br>
-
-                    <label for="FirstLastName">{{'FirstLastName'}}</label>
-                    <input type="text" name="FirstLastName" id="FirstLastName" value="">
-                    <br>
-
-                    <label for="Name">{{'SecondLastName'}}</label>
-                    <input type="text" name="SecondLastName" id="SecondLastName" value="">
-                    <br>
-
-                    <label for="Photo">{{'Photo'}}</label>
-                    <input type="file" name="Photo" id="Photo" value="">
-                    <br>
-
-                    <input type="submit" value="Save">
+                    <input type="submit" value="Create">
 
                     <a href="{{url('/employees')}}">Back</a>
 
