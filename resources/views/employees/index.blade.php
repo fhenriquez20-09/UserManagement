@@ -7,7 +7,7 @@
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
+            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg table-container">
 
             <a href="{{url('/employees/create')}}">New employee</a>
                 
@@ -29,21 +29,31 @@
                             <tr>
                                 <td>{{$loop->iteration}}</td>
                                 <td>
-                                    <img src="{{ asset('storage').'/'.$employee->Photo}}" alt="" width="200">
+                                    <div class="profile-image-table">
+                                        <img src="{{ asset('storage').'/'.$employee->Photo}}" alt="">
+                                    </div>
                                 </td>
                                 <td>{{$employee->Name}}</td>
                                 <td>{{$employee->Email}}</td>
                                 <td>{{$employee->FirstLastName}}</td>
                                 <td>{{$employee->SecondLastName}}</td>
                                 <td>{{$employee->created_at}}</td>
-                                <td> 
-                                    <a href="{{url('/employees/'.$employee->id.'/edit')}}">Editar</a>
-                                    | 
-                                    <form method="post" action="{{ url('/employees/'.$employee->id) }}">
-                                        {{csrf_field()}}
-                                        {{method_field('DELETE')}}
-                                        <button type="submit" onclick="return confirm('Are you sure ?')">Delete</button>
-                                    </form>
+                                <td nowrap>
+                                    <div class="row">
+                                        <div class="px-2">
+                                            <a href="{{url('/employees/'.$employee->id.'/edit')}}">Editar</a>
+                                        </div>
+                                        <div class="px-2">
+                                            |
+                                        </div>
+                                        <div class="px-2">
+                                            <form method="post" action="{{ url('/employees/'.$employee->id) }}">
+                                                {{csrf_field()}}
+                                                {{method_field('DELETE')}}
+                                                <button type="submit" onclick="return confirm('Are you sure ?')">Delete</button>
+                                            </form>
+                                        </div>
+                                    </div>
                                 </td>
                             </tr>
                         @endforeach

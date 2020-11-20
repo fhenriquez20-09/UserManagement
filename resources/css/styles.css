@@ -49,3 +49,36 @@
     flex: 0 0 50%;
     max-width: 50%;
 }
+
+/* table */
+.table{
+    width: 100%;
+}
+.table-container{
+    padding: 20px;
+}
+.table-container td{
+    padding: 10px;
+}
+.table-container .profile-image-table{
+    width: 50px;
+    height: 50px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border-radius: 100px;
+    position: relative;
+    overflow: hidden;
+}
+.table-container .profile-image-table img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    display: inline-block;
+}
+.px-2{
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
